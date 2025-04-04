@@ -11,7 +11,7 @@ public class DeleteProductCommandValidator : AbstractValidator<DeleteProductComm
     }
 }
 
-public class DeleteProductHandler(IDocumentSession session, ILogger<DeleteProductEndpoint> logger) 
+public class DeleteProductHandler(IDocumentSession session) 
     : ICommandHandler<DeleteProductCommand, DeleteProductResult>
 {
     public async Task<DeleteProductResult> Handle(DeleteProductCommand command, CancellationToken cancellationToken)

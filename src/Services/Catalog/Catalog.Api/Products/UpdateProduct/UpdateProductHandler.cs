@@ -15,7 +15,7 @@ public class UpdateProductCommandValidator : AbstractValidator<UpdateProductComm
     }
 }
 
-public class UpdateProductHandler(IDocumentSession session, ILogger<UpdateProductHandler> logger) 
+public class UpdateProductHandler(IDocumentSession session) 
     : IRequestHandler<UpdateProductCommand, UpdateProductResult>
 {
     public async Task<UpdateProductResult> Handle(UpdateProductCommand command, CancellationToken cancellationToken)

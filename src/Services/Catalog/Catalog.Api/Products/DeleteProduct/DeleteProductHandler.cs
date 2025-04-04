@@ -20,7 +20,7 @@ public class DeleteProductHandler(IDocumentSession session, ILogger<DeleteProduc
         
         if (product == null)
         {
-            throw new ProductNotFoundException();
+            throw new ProductNotFoundException(command.Id);
         }
         
         session.Delete(product);
